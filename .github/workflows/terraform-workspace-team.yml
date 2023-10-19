@@ -1,4 +1,4 @@
-name: Create Terraform Workspace and Team
+name: Create Terraform Cloud Team
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  create-workspace-and-team:
+  create-terraform-cloud-team:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,21 +16,9 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - name: Create Workspace
-        env:
-          TF_CLI_CONFIG_FILE: ${{ github.workspace }}/.terraformrc
-        run: |
-          terraform login -token=${{ secrets.TF_API_TOKEN }}
-          terraform workspace new my-workspace
-
       - name: Create Team
         env:
           TF_CLI_CONFIG_FILE: ${{ github.workspace }}/.terraformrc
         run: |
           terraform login -token=${{ secrets.TF_API_TOKEN }}
           terraform import tfe_team.my-team ${{ secrets.TF_ORG_NAME }}/my-team
-
-      - name: Create Environment Files
-        run: |
-          echo "TF_WORKSPACE=my-workspace" >> $GITHUB_ENV
-          echo "TF_TEAM_NAME=my-team" >> $GITHUB_ENV
