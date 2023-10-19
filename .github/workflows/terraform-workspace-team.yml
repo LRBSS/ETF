@@ -1,4 +1,4 @@
-name: Create Terraform Workspace and Team hpefully
+name: Create Terraform Workspace and Team
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           terraform login -token=${{ secrets.TF_API_TOKEN }}
           terraform import tfe_team.my-team ${{ secrets.TF_ORG_NAME }}/my-team
 
-      - name: Create Environment File
+      - name: Create Environment Files
         run: |
           echo "TF_WORKSPACE=my-workspace" >> $GITHUB_ENV
           echo "TF_TEAM_NAME=my-team" >> $GITHUB_ENV
