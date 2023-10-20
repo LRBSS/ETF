@@ -1,55 +1,12 @@
 {
-    "data": {
-      "id": "team-Ea2iz3W2wAvocHbT",
-      "type": "teams",
-      "attributes": {
-        "name": "FirstTeam",
-        "users-count": 0,
-        "sso-team-id": null,
-        "visibility": "secret",
-        "permissions": {
-          "can-update-membership": true,
-          "can-destroy": true,
-          "can-update-organization-access": true,
-          "can-update-api-token": true,
-          "can-update-visibility": true,
-          "can-update-name": true,
-          "can-update-sso-team-id": true
-        },
-        "organization-access": {
-          "manage-policies": false,
-          "manage-workspaces": true,
-          "manage-vcs-settings": false,
-          "manage-policy-overrides": false,
-          "manage-modules": false,
-          "manage-providers": false,
-          "manage-run-tasks": false,
-          "manage-projects": false,
-          "manage-membership": false,
-          "read-projects": false,
-          "read-workspaces": false
-        }
-      },
-      "relationships": {
-        "organization": {
-          "data": {
-            "id": "AlaEssaim",
-            "type": "organizations"
-          }
-        },
-        "users": {
-          "data": []
-        },
-        "organization-memberships": {
-          "data": []
-        },
-        "authentication-token": {
-          "meta": {}
-        }
-      },
-      "links": {
-        "self": "/api/v2/teams/team-Ea2iz3W2wAvocHbT"
+  "data": {
+    "type": "teams",
+    "attributes": {
+      "name": "FirstTeam",
+      
+      "organization-access": {
+        "manage-workspaces": true
       }
     }
   }
-  
+}

@@ -1,0 +1,13 @@
+{
+    "data": {
+      "type": "teams",
+      "attributes": {
+        "name": "FirstTeam",
+        
+        "organization-access": {
+          "manage-workspaces": true
+        }
+      }
+    }
+  }
+  
