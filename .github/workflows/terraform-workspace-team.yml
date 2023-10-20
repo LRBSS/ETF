@@ -19,4 +19,4 @@ jobs:
       - name: Create Team
         
         run: |
-          ./creationTeam.sh
+          ./TFCloudCurls/creationTeam.sh
