@@ -2,7 +2,7 @@
   "data": {
     "type": "teams",
     "attributes": {
-      "name": "FirstTeam",
+      "name": "FirstTeam1",
       
       "organization-access": {
         "manage-workspaces": true
