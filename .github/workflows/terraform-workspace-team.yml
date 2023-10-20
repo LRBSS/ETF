@@ -18,5 +18,6 @@ jobs:
 
       - name: Create Team
         
-        run: |
+        run: | 
+          chmod +x ./TFCloudCurls/creationTeam.sh
           ./TFCloudCurls/creationTeam.sh
