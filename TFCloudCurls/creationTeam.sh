@@ -1,6 +1,6 @@
 #!/bin/bash
 curl \
-  --header "Authorization: zVn2HpBDItPOjw.atlasv1.O6GsHJjjMq0byozz4VPjx9Qa0O471GjWla0JBCrd0cyTNzS9tZEMZHq23GPpBEQ2mzk" \
+  --header "Authorization: 8RFBPtDNVAhKvg.atlasv1.LQL14jwCaxAzLuVIvydoTZeZ8pg2Qi5KtGViwRPZ1m1L4kV65yV0dJPQKpkL6MhSc04" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data @./TFCloudCurls/team.json \
