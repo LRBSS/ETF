@@ -21,7 +21,7 @@ echo "$json_data"
 
 # Utilisez `curl` pour effectuer la demande POST avec les données JSON intégrées
 curl \
-  --header "Authorization: Bearer 8RFBPtDNVAhKvg.atlasv1.LQL14jwCaxAzLuVIvydoTZeZ8pg2Qi5KtGViwRPZ1m1L4kV65yV0dJPQKpkL6MhSc04" \
+  --header "Authorization: Bearer rdutBXOCUC5Cmw.atlasv1.KePN9Tvkrytt77WT97eBPPnd53yZoUpgfJlPqr8yyyoLCnhfQBX1p4p5rGDzIOo9L0g" \
   --header "Content-Type: application/vnd.api+json" \
   --request GET \
   --data "$json_data" \
