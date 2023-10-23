@@ -6,7 +6,7 @@ json_data=$(cat <<EOF
   "data": {
     "type": "teams",
     "attributes": {
-      "name": "FirstTeam1",
+      "name": "FirstTeam3",
       "organization-access": {
         "manage-workspaces": true
       }
