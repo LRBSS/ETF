@@ -1,6 +1,6 @@
 #!/bin/bash
 
-workspace_name="$2"
+workspace_name="$3"
 echo "Workspace name: $workspace_name"
 json_data=$(cat <<EOF
 {
