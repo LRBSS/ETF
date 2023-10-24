@@ -5,7 +5,7 @@ json_data=$(cat <<EOF
 {
   "data": {
     "attributes": {
-      "name": $1 ,
+      "name": "$1" ,
       "resource-count": 0,
       "updated-at": "2017-11-29T19:18:09.976Z"
     },
