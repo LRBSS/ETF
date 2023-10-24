@@ -22,4 +22,4 @@ jobs:
         
         run: | 
           chmod +x ./TFCloudCurls/creationTeam.sh
-          ./TFCloudCurls/creationTeam.sh  ${{ secrets.TF_API_TOKEN }}
+          ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" ${{ secrets.TF_API_TOKEN }}
