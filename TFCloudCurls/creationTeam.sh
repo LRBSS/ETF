@@ -23,7 +23,7 @@ EOF
 
 # Use `curl` to perform the POST request with the embedded JSON data
 curl \
-  --header "Authorization: Bearer $2" \
+  --header "Authorization: Bearer $3" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
