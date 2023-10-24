@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Check if the team name argument is provided
-if [ $# -ne 1 ]; then
-  echo "Usage: $0 <team_name>"
-  exit 1
-fi
+
 
 team_name="$1"
 
