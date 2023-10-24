@@ -20,5 +20,5 @@ curl \
   --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
-  --data @json_data \
+  --data "@json_data" \
   https://app.terraform.io/api/v2/organizations/AlaEssaim/workspaces
