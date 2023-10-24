@@ -21,4 +21,4 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
-  https://app.terraform.io/api/v2/organizations/AlaEssaim/workspaces
+  "https://app.terraform.io/api/v2/organizations/AlaEssaim/workspaces"
