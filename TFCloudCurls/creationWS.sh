@@ -1,12 +1,12 @@
 #!/bin/bash
 
-workspace_name="$1"
-echo "Workspace name: $workspace_name"
+echo $1
+
 json_data=$(cat <<EOF
 {
   "data": {
     "attributes": {
-      "name": "$workspace_name",
+      "name":  "WS" ,
       "resource-count": 0,
       "updated-at": "2017-11-29T19:18:09.976Z"
     },
