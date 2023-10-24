@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo $1
 
 json_data=$(cat <<EOF
 {
@@ -18,7 +17,7 @@ EOF
 )
 
 curl \
-  --header "Authorization: Bearer $2" \
+  --header "Authorization: Bearer $1" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST\
   --data "$json_data" \
