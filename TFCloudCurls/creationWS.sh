@@ -1,7 +1,24 @@
 #!/bin/bash
+
+workspace_name="$1"
+
+json_data=$(cat <<EOF
+{
+ "data": {
+      "attributes": {
+        "name": "$workspace_name",
+        "resource-count": 0,
+        "updated-at": "2017-11-29T19:18:09.976Z"
+      },
+      "type": "workspaces"
+      }
+    }
+EOF
+)
+
 curl \
-  --header "Authorization: Bearer GsVrThN1T5vkxA.atlasv1.Fpn9sDlw6BOXsPrVXAx0U4BvBYbLCPzJXTmzUP3yaw4hdf91vcMjaWBZGt5FNqmFTGU" \
+  --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
-  --data @Workspace.json \
+  --data @json.data \
   https://app.terraform.io/api/v2/organizations/AlaEssaim/workspaces
