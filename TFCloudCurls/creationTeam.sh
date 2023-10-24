@@ -1,12 +1,20 @@
 #!/bin/bash
 
-# Utilisez une Here Document pour inclure les données JSON directement dans le script
+# Check if the team name argument is provided
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <team_name>"
+  exit 1
+fi
+
+team_name="$1"
+
+# Utilize a Here Document for JSON data
 json_data=$(cat <<EOF
 {
   "data": {
     "type": "teams",
     "attributes": {
-      "name": "FirstTeam5",
+      "name": "$team_name",
       "organization-access": {
         "manage-workspaces": true
       }
@@ -16,13 +24,10 @@ json_data=$(cat <<EOF
 EOF
 )
 
-# Utilisez `echo` pour afficher les données JSON (à des fins de débogage, si nécessaire)
-echo "$json_data"
-
-# Utilisez `curl` pour effectuer la demande POST avec les données JSON intégrées
+# Use `curl` to perform the POST request with the embedded JSON data
 curl \
-  --header "Authorization: Bearer $1" \
+  --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
-  https://app.terraform.io/api/v2/organizations/AlaEssaim/teams
+  "https://app.terraform.io/api/v2/organizations/AlaEssaim/teams"
