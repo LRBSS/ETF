@@ -1,0 +1,25 @@
+name: Create Terraform Cloud Team with input
+
+on:
+  workflow_dispatch:
+    inputs:
+      team_name:
+        description: 'Team name'
+        required: true
+
+jobs:
+  create-terraform-cloud-team:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Create Team
+        
+        run: | 
+          chmod +x ./TFCloudCurls/creationTeam.sh
+          ./TFCloudCurls/creationTeam.sh  ${{ secrets.TF_API_TOKEN }}
