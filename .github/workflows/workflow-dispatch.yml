@@ -3,9 +3,9 @@ name: Create Terraform Cloud Team and workspace with input
 on:
   workflow_dispatch:
     inputs:
-      #team_name:
-       #description: 'Team name'
-        #required: true
+      team_name:
+        description: 'Team name'
+        required: true
       worksapce_name:
         description: 'Worksapce name'
         required: true
@@ -27,10 +27,10 @@ jobs:
           chmod +x ./TFCloudCurls/creationWS.sh
           ./TFCloudCurls/creationWS.sh  ${{ github.event.inputs.workspace_name }} ${{ secrets.TF_API_TOKEN }} 
 
-      #- name: Create Team 
+      - name: Create Team 
         
-       # run: | 
-        #  chmod +x ./TFCloudCurls/creationTeam.sh
-        #  ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" ${{ secrets.TF_API_TOKEN }}
+        run: | 
+           chmod +x ./TFCloudCurls/creationTeam.sh
+           ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" ${{ secrets.TF_API_TOKEN }}
     
     
