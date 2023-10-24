@@ -4,7 +4,6 @@ workspace_name="$1"
 
 json_data=$(cat <<EOF
 {
-{
   "data": {
     "attributes": {
       "name": "$workspace_name",
@@ -14,6 +13,7 @@ json_data=$(cat <<EOF
     "type": "workspaces"
   }
 }
+
 EOF
 )
 
