@@ -3,9 +3,9 @@ name: Create Terraform Cloud Team and workspace with input
 on:
   workflow_dispatch:
     inputs:
-      team_name:
-        description: 'Team name'
-        required: true
+      #team_name:
+       #description: 'Team name'
+        #required: true
       worksapce_name:
         description: 'Worksapce name'
         required: true
