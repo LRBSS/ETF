@@ -5,7 +5,7 @@ json_data=$(cat <<EOF
 {
   "data": {
     "attributes": {
-      "name":  "WS" ,
+      "name": $1 ,
       "resource-count": 0,
       "updated-at": "2017-11-29T19:18:09.976Z"
     },
@@ -17,7 +17,7 @@ EOF
 )
 
 curl \
-  --header "Authorization: Bearer $1" \
+  --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST\
   --data "$json_data" \
