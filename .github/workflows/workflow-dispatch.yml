@@ -25,7 +25,7 @@ jobs:
         
         run: | 
           chmod +x ./TFCloudCurls/creationWS.sh
-          ./TFCloudCurls/creationWS.sh  ${{ secrets.TF_API_TOKEN }} 
+          ./TFCloudCurls/creationWS.sh  ${{ github.event.inputs.worksapce_name }} ${{ secrets.TF_API_TOKEN }} 
 
       - name: Create Team 
         
