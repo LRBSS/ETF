@@ -27,10 +27,10 @@ jobs:
           chmod +x ./TFCloudCurls/creationWS.sh
           ./TFCloudCurls/creationWS.sh  "${{ github.event.inputs.workspace_name }}" ${{ secrets.TF_API_TOKEN }} 
 
-      - name: Create Team 
+      #- name: Create Team 
         
-        run: | 
-          chmod +x ./TFCloudCurls/creationTeam.sh
-          ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" ${{ secrets.TF_API_TOKEN }}
+       # run: | 
+        #  chmod +x ./TFCloudCurls/creationTeam.sh
+        #  ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" ${{ secrets.TF_API_TOKEN }}
     
     
