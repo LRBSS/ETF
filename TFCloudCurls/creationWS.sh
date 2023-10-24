@@ -1,6 +1,6 @@
 #!/bin/bash
 
-workspace_name="$2"
+workspace_name="$1"
 
 json_data=$(cat <<EOF
 {
@@ -17,7 +17,7 @@ EOF
 )
 
 curl \
-  --header "Authorization: Bearer $3" \
+  --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data @json.data \
