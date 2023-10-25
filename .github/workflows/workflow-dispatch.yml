@@ -34,6 +34,6 @@ jobs:
              chmod +x ./TFCloudCurls/creationWS.sh
              workspace_id=$(./TFCloudCurls/creationWS.sh "${{ github.event.inputs.workspace_name }}" "${{ secrets.TF_API_TOKEN }}" | jq -r '.data.id')
    
-             echo "::set-output name=team_id::$team_id"
-             echo "::set-output name=workspace_id::$workspace_id"
+             echo "TEAM_ID=$team_id" >> $GITHUB_ENV
+             echo "WORKSPACE_ID=$workspace_id" >> $GITHUB_ENV
     
