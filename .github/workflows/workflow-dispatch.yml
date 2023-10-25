@@ -18,19 +18,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
-      - name: Create  Workspace
-        
-        run: | 
-          chmod +x ./TFCloudCurls/creationWS.sh
-          ./TFCloudCurls/creationWS.sh  "${{ github.event.inputs.workspace_name }}" "${{ secrets.TF_API_TOKEN }}"
-
+      
       - name: Create Team 
         
         run: | 
            chmod +x ./TFCloudCurls/creationTeam.sh
            ./TFCloudCurls/creationTeam.sh  "${{ github.event.inputs.team_name }}" "${{ secrets.TF_API_TOKEN }}"
+      - name: Create  Workspace
+        
+        run: | 
+             chmod +x ./TFCloudCurls/creationWS.sh
+             ./TFCloudCurls/creationWS.sh  "${{ github.event.inputs.workspace_name }}" "${{ secrets.TF_API_TOKEN }}"
+   
     
     
