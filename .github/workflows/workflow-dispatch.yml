@@ -6,7 +6,7 @@ on:
       team_name:
         description: 'Team name'
         required: true
-      worksapce_name:
+      workspace_name:
         description: 'Worksapce name'
         required: true
 
