@@ -29,7 +29,7 @@ jobs:
            team_id=$(./TFCloudCurls/creationTeam.sh "${{ github.event.inputs.team_name }}" "${{ secrets.TF_API_TOKEN }}" | jq -r '.data.id')
            
            
-           echo "TEAM_ID=$team_id" 
+           echo "TEAM_ID=$team_id" >> $GITHUB_ENV
       - name: Create  Workspace
         
         run: | 
@@ -37,5 +37,5 @@ jobs:
              workspace_id=$(./TFCloudCurls/creationWS.sh "${{ github.event.inputs.workspace_name }}" "${{ secrets.TF_API_TOKEN }}" | jq -r '.data.id')
    
              
-             echo "WORKSPACE_ID=$workspace_id" 
+             echo "WORKSPACE_ID=$workspace_id" >> $GITHUB_ENV
     
