@@ -17,13 +17,13 @@ json_data=$(cat <<EOF
       "workspace": {
         "data": {
           "type": "workspaces",
-          "id": $1
+          "id": "$1"
         }
       },
       "team": {
         "data": {
           "type": "teams",
-          "id": $2
+          "id": "$2"
         }
       }
     },
