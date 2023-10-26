@@ -38,4 +38,13 @@ jobs:
    
              
              echo "WORKSPACE_ID=$workspace_id" >> $GITHUB_ENV
+
+      - name: Create Relation 
+        
+        run: | 
+                 chmod +x ./TFCloudCurls/createRelation.sh
+                 ./TFCloudCurls/creationWS.sh  "${{ secrets.TF_API_TOKEN }}"
+   
+             
+        
     
