@@ -17,13 +17,13 @@ json_data=$(cat <<EOF
       "workspace": {
         "data": {
           "type": "workspaces",
-          "id": $WORKSPACE_ID
+          "id": $1
         }
       },
       "team": {
         "data": {
           "type": "teams",
-          "id": $TEAM_ID
+          "id": $2
         }
       }
     },
@@ -38,7 +38,7 @@ EOF
 
 
 curl \
-  --header "Authorization: Bearer $1" \
+  --header "Authorization: Bearer $3" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data"\
