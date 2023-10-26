@@ -42,8 +42,8 @@ jobs:
       - name: Create Relation 
         
         run: | 
-                 chmod +x ./TFCloudCurls/createRelation.sh
-                 ./TFCloudCurls/creationWS.sh  "${{ secrets.TF_API_TOKEN }}"
+                 chmod +x ./TFCloudCurls/creationRelation.sh
+                 ./TFCloudCurls/creationRelation.sh  "${{ secrets.TF_API_TOKEN }}"
    
              
         
