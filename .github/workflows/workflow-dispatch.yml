@@ -43,7 +43,7 @@ jobs:
         
         run: | 
                  chmod +x ./TFCloudCurls/creationRelation.sh
-                 ./TFCloudCurls/creationRelation.sh  "${{ secrets.TF_API_TOKEN }}"
+                 ./TFCloudCurls/creationRelation.sh "${{ env.TEAM_ID }}" "${{ env.WORKSPACE_ID }}"  "${{ secrets.TF_API_TOKEN }}"
    
              
         
