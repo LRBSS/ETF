@@ -27,4 +27,4 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
-  "$TFE_HOST/$ORG/teams"
+  "https://app.terraform.io/api/v2/organizations/AlaEssaim/teams"
