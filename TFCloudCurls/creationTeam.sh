@@ -20,11 +20,15 @@ json_data=$(cat <<EOF
 }
 EOF
 )
-
+TFE_HOST="$TFE_HOST"
+ORG="$ORG"
+echo "TFE_HOST: $TFE_HOST"
+echo "ORG: $ORG"
 # Use `curl` to perform the POST request with the embedded JSON data
 curl \
   --header "Authorization: Bearer $2" \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
+
   "$TFE_HOST/$ORG/teams"
