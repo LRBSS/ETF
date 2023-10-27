@@ -27,4 +27,4 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
-  "${{ env.TFE_HOST }/${{ env.ORG }/teams"
+  "${TFE_HOST }/${ORG }/teams"
