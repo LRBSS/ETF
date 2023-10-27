@@ -30,5 +30,4 @@ curl \
   --header "Content-Type: application/vnd.api+json" \
   --request POST \
   --data "$json_data" \
-
   "$TFE_HOST/$ORG/teams"
